@@ -9,7 +9,7 @@ data "tls_certificate" "hcp_certificate" {
   url = "https://${var.hcp_hostname}"
 }
 
-resource "aws_iam_openid_connect_provider" "stacks_openid_provider" {
+resource "aws_iam_openid_connect_provider" "stacks_openid_provider_petya" {
   url            = "https://${var.hcp_hostname}"
   client_id_list = ["aws.workload.identity"]
 
