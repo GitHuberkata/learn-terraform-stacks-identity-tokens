@@ -26,7 +26,7 @@ data "aws_iam_policy_document" "stacks_role_policy" {
     effect = "Allow"
     principals {
       type        = "Federated"
-      identifiers = [aws_iam_openid_connect_provider.stacks_openid_provider.arn]
+      identifiers = [aws_iam_openid_connect_provider.stacks_openid_provider_petya1.arn]
     }
     actions = ["sts:AssumeRoleWithWebIdentity"]
     condition {
